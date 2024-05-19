@@ -1,4 +1,4 @@
-# Binary: Buggy Company
+# RE: Buggy Company
 Challenge: Buggy Company  
 CTF name: Whitehacks 2024  
 Date attempted: 15.04.2024  
@@ -119,3 +119,17 @@ This is it!
 > 'One of us!' The bug yelps, and hands you the loot.  
 > WH2024{J!0N_TH3_8UG_M4F!4}
 
+<br><br>
+### In Summary
+1. Open buggy_company in Ghidra.
+2. Search for the main function. ⭐ 
+    * When you find it, rename it to main.
+
+3. Along the way, rename what you know.
+4. You will find that there are 2 main issues with buggy_company
+    * Debugger check. So, you cannot run buggy_company while using GDB.
+    * Passphrase .env variable is empty, which returns noloot() automatically. Dang.
+
+5. You have the hash from checking strings. This is decoded into YIPPEE.
+6. Set YIPPEE into the environment variable into your terminal.
+7. Run buggy_company.
